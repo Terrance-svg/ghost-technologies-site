@@ -1,0 +1,23 @@
+GHOST INVENTORY WEBSITE — GITHUB DEPLOYMENT
+
+1. Download and unzip this package.
+2. Open your existing Ghost Technologies website repository on your computer.
+3. Make a backup copy of the current repository folder.
+4. Replace the old website files with every file from this package.
+   IMPORTANT: include CNAME and the hidden .nojekyll file.
+5. Open GitHub Desktop.
+6. Select the website repository.
+7. Review the changed files.
+8. Summary: Premium Ghost Inventory website redesign
+9. Click Commit to main.
+10. Click Push origin.
+11. On github.com, open the repository → Settings → Pages.
+12. Set Source to Deploy from a branch, Branch to main, Folder to / (root).
+13. Confirm custom domain: ghost-technologies.net
+14. Turn on Enforce HTTPS after GitHub confirms the domain.
+15. Wait for the green deployment result and test all pages.
+
+PLAY CONSOLE URLS
+Privacy policy: https://ghost-technologies.net/privacy/
+Account deletion: https://ghost-technologies.net/delete-account/
+Support: https://ghost-technologies.net/support/
