@@ -1,0 +1,18 @@
+Ghost Technologies Website V2.66.44 Validation
+Date: July 26, 2026
+
+Passed:
+- 7 HTML pages parsed.
+- Internal page links and local image/CSS/JS references resolved.
+- JavaScript syntax passed node --check.
+- CSS brace balance passed.
+- Hero headline and supporting copy updated.
+- V2.66.43 narrow Android phone/callout layout rules preserved, with a smaller V2.66.44 mobile headline override.
+- Terms and Privacy effective date aligned to July 26, 2026.
+- Recovery-passphrase replacement, Demo Mode, AI-assisted Walkthrough, shared Free report allowance, account deletion and current report language included.
+- Website icon, 32/192/512 PWA assets and 1200x630 social card updated.
+
+Not completed here:
+- Interactive browser/device testing.
+- Production deployment.
+- Legal review by qualified Canadian counsel.
