@@ -1,7 +1,8 @@
 
 (() => {
   const root = document.documentElement;
-  const stored = localStorage.getItem('ghost-theme');
+  let stored = null;
+  try { stored = localStorage.getItem('ghost-theme'); } catch (_) {}
   if (stored === 'light' || stored === 'dark') root.dataset.theme = stored;
   else if (window.matchMedia('(prefers-color-scheme: light)').matches) root.dataset.theme = 'light';
 
@@ -15,21 +16,32 @@
   updateThemeButton();
   document.querySelectorAll('[data-theme-toggle]').forEach(btn => btn.addEventListener('click', () => {
     root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('ghost-theme', root.dataset.theme);
+    try { localStorage.setItem('ghost-theme', root.dataset.theme); } catch (_) {}
     updateThemeButton();
   }));
 
   const menu = document.querySelector('[data-mobile-menu]');
   const links = document.querySelector('[data-nav-links]');
   if (menu && links) {
+    const closeMenu = (returnFocus = false) => {
+      links.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.innerHTML = '☰';
+      if (returnFocus) menu.focus();
+    };
     menu.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       menu.setAttribute('aria-expanded', String(open));
       menu.innerHTML = open ? '×' : '☰';
+      if (open) links.querySelector('a')?.focus();
     });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      links.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.innerHTML='☰';
-    }));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => closeMenu(false)));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && links.classList.contains('open')) closeMenu(true);
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1020 && links.classList.contains('open')) closeMenu(false);
+    }, {passive:true});
   }
 
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
@@ -39,7 +51,14 @@
   document.querySelectorAll('.reveal').forEach(el => observer ? observer.observe(el) : el.classList.add('visible'));
 
   const canvas = document.querySelector('.network-bg');
-  if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const smallScreen = window.matchMedia('(max-width: 760px)').matches;
+  const saveData = Boolean(navigator.connection && navigator.connection.saveData);
+  const lowMemory = typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 4;
+  if (!canvas || reducedMotion || smallScreen || saveData || lowMemory) {
+    if (canvas) canvas.style.display = 'none';
+    return;
+  }
   const ctx = canvas.getContext('2d');
   let w,h,dpr,points=[];
   function resize(){
