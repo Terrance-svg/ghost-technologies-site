@@ -3,8 +3,8 @@
   "short_name": "Ghost Inventory",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#020a18",
-  "theme_color": "#06142d",
+  "background_color": "#05080b",
+  "theme_color": "#05080b",
   "icons": [
     {
       "src": "/assets/images/icon-192.png",
