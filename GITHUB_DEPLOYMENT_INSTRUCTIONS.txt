@@ -1,23 +1,24 @@
-GHOST INVENTORY WEBSITE — GITHUB DEPLOYMENT
+GHOST INVENTORY WEBSITE — V11 ANDROID LAUNCH — COMPLETE DROP-IN
 
-1. Download and unzip this package.
-2. Open your existing Ghost Technologies website repository on your computer.
-3. Make a backup copy of the current repository folder.
-4. Replace the old website files with every file from this package.
-   IMPORTANT: include CNAME and the hidden .nojekyll file.
-5. Open GitHub Desktop.
-6. Select the website repository.
-7. Review the changed files.
-8. Summary: Premium Ghost Inventory website redesign
-9. Click Commit to main.
-10. Click Push origin.
-11. On github.com, open the repository → Settings → Pages.
-12. Set Source to Deploy from a branch, Branch to main, Folder to / (root).
-13. Confirm custom domain: ghost-technologies.net
-14. Turn on Enforce HTTPS after GitHub confirms the domain.
-15. Wait for the green deployment result and test all pages.
+This is a COMPLETE website package. No manual patching or file merging is required.
 
-PLAY CONSOLE URLS
-Privacy policy: https://ghost-technologies.net/privacy/
-Account deletion: https://ghost-technologies.net/delete-account/
-Support: https://ghost-technologies.net/support/
+1. Back up the current website repository.
+2. Remove/replace the current website files with the contents of this package.
+3. Make sure CNAME and the hidden .nojekyll file are included at repository root.
+4. Open GitHub Desktop and review the changed files.
+5. Commit summary: Ghost Inventory V11 Android launch website
+6. Push origin.
+7. On GitHub: repository → Settings → Pages.
+8. Confirm Source = Deploy from a branch, Branch = main, Folder = / (root).
+9. Confirm custom domain = ghost-technologies.net and Enforce HTTPS is enabled.
+10. After deployment, test: /, /privacy/, /terms/, /support/, /contact/, /delete-account/.
+11. Confirm the Google Play button opens:
+    https://play.google.com/store/apps/details?id=com.ghostinventory.app
+
+Launch changes included:
+- Live Google Play download buttons.
+- Android status = Available on Google Play.
+- iOS status = In development.
+- Paid plan monetary values use Ghost gold.
+- QR code removed from the website.
+- Privacy, Terms, Support, Contact and Account Deletion routes included in this package.

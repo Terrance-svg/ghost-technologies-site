@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://ghost-technologies.net/sitemap.xml
