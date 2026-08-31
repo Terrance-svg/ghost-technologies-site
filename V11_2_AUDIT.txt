@@ -1,0 +1,14 @@
+Ghost Inventory Website V11.2 — Exact Design Preserved
+
+Purpose:
+- Preserve the approved V11 visual design exactly as shown in the user's screenshot.
+- No hero, typography, spacing, section, navigation, or layout redesign.
+
+Launch content present:
+- Live Google Play link for com.ghostinventory.app
+- Android status: Available on Google Play
+- iOS status: In development
+- Paid-plan monetary values use Ghost gold (#ECC45E)
+- No QR code on public pages
+
+This package is a full drop-in site. Existing legal/support/contact/delete-account pages are included.
