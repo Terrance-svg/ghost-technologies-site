@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ghostinventory.app",
+      "sha256_cert_fingerprints": [
+        "DD:40:65:8D:11:9C:4A:F9:56:AF:14:B2:54:A1:09:90:EE:93:04:F6:7D:98:BC:17:5D:23:7A:76:72:6A:5F:A0"
+      ]
+    }
+  }
+]
