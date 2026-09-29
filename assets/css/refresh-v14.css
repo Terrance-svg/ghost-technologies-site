@@ -1,0 +1,32 @@
+/* V14: current product gallery and receipt-first feature presentation. */
+.product-screen-frame{display:block;padding:0;border-radius:18px;transition:transform .2s ease,border-color .2s ease}
+.product-screen-frame img{display:block;width:100%;height:auto;border-radius:17px}
+.product-screen-frame:hover{transform:translateY(-4px);border-color:#77edf5}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:3px solid #b78b36;outline-offset:5px}
+.product-screen-card figcaption strong{font-size:1rem}
+.product-screen-card figcaption span{font-size:.875rem}
+.receipt-feature .feature-photo-wrap{background:#061820;padding:20px;min-height:0;display:flex;align-items:center;justify-content:center}
+.receipt-feature .feature-photo-wrap img{width:min(100%,290px);height:auto;object-fit:contain;border-radius:14px}
+.receipt-feature .feature-copy p{font-size:1rem;line-height:1.7}
+.evidence-preview{min-height:0;text-align:center}
+.evidence-preview img{display:block;width:min(100%,360px);height:auto;border-radius:18px;margin:auto;box-shadow:0 24px 60px #0005}
+.consumer-hero-copy h1{line-height:1.04;letter-spacing:-.045em}
+.consumer-feature>span,.feature-copy>span,.warm-card>span,.kicker,.consumer-eyebrow{font-size:.875rem}
+.consumer-feature p,.warm-card p,.consumer-process-step p{font-size:1rem}
+.security-row span,.security-row b,.consumer-security-card small,.consumer-checks span{font-size:.875rem}
+@media(max-width:760px){.receipt-feature .feature-photo-wrap img{max-width:260px}.consumer-hero-copy h1{font-size:clamp(2.8rem,12vw,4.4rem)}.consumer-hero-grid{min-width:0}.hero-actions .btn{white-space:normal;text-align:center}.brand-wordmark strong{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.product-screen-frame{transition:none}.product-screen-frame:hover{transform:none}}
+
+/* V15: click-to-load portrait YouTube feature. */
+.video-section{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.video-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;gap:clamp(32px,6vw,88px)}
+.video-copy h2{font-size:clamp(2.25rem,4.5vw,4.5rem);line-height:1.08;letter-spacing:-.035em;margin:16px 0 24px;max-width:680px}
+.video-copy>p{color:var(--muted);font-size:1.0625rem;max-width:560px}
+.video-copy .video-note{font-size:.875rem;line-height:1.6;margin-top:24px}
+.video-frame{width:min(100%,340px);aspect-ratio:9/16;justify-self:center;overflow:hidden;border:1px solid #53888b;border-radius:22px;background:#061820;box-shadow:0 24px 60px #0003}
+.video-load{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;border:0;background:radial-gradient(ellipse at center,#153e48,#061820 75%);color:#f1f7f8;cursor:pointer;font:inherit;text-align:center}
+.video-play{display:grid;place-items:center;width:80px;height:80px;border:1px solid #7ce6ed;border-radius:50%;background:#0a2933;color:#7ce6ed;font-size:1.75rem;padding-left:4px}
+.video-load strong{font-size:1.5rem}.video-load>span:not(.video-play){font-size:1rem}.video-load small{font-size:.875rem;color:#bacdd3}
+.video-load:hover .video-play{background:#204750}.video-load:focus-visible{outline-offset:-6px}
+.video-frame iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:760px){.video-grid{grid-template-columns:minmax(0,1fr)}.video-frame{width:min(100%,320px)}.video-copy h2{font-size:2.5rem}}
